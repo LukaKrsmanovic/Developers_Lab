@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>License details</legend>
+            <ul>
+                <li>
+                    <label for="email_address">Email address </label>
+                    <input type="text" name="email_address" id="email_address" placeholder="example@gmail.com" required>
+                </li>
+                <li>
+                    <label for="website">Website </label>
+                    <input type="text" name="website" id="website" placeholder="http://www.example.com/" required>
+                </li>
+                <li>
+                    <label for="number_of_licenses">Number of licenses </label>
+                    <input type="text" name="number_of_licenses" id="number_of_licenses" placeholder="How many to but (1-10)" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Billing details</legend>
+            <ul>
+                <li>
+                    <label for="name">Name </label>
+                    <input type="text" name="name" id="name" placeholder="First Last" required>
+                </li>
+                <li>
+                    <label for="address">Address </label>
+                    <textarea name="address" id="address" cols="23" rows="3" placeholder="House number, street, city, state" required></textarea>
+                </li>
+                <li>
+                    <label for="postal_code">Postal code </label>
+                    <input type="text" name="postal_code" id="postal_code" placeholder="Post code or zip code" required>
+                </li>
+                <li>
+                    <label for="country">Country </label>
+                    <select name="country" id="country">
+                        <option value="australia" selected>Australia</option>
+                        <option value="france">France</option>
+                        <option value="england">England</option>
+                        <option value="spain">Spain</option>
+                        <option value="montenegro">Montenegro</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="phone">Phone <i>(optional)</i> </label>
+                    <input type="number" name="phone" id="phone" placeholder="Include country prefix, e.g. 00382">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Payment details</legend>
+            <ul>
+                <li>
+                    <label for="card_number">Card number </label>
+                    <input type="number" name="card_number" id="card_number" placeholder="As shown on the front of your card" required>
+                </li>
+                <li>
+                    <label for="cvv_code">CVV code </label>
+                    <input type="number" name="cvv_code" id="cvv_code" maxlength="3" placeholder="3 digit number on back of your card" required>
+                </li>
+                <li>
+                    <label for="exp_date">Expiry date </label>
+                    <input type="text" name="exp_date" id="exp_date" placeholder="YYYY-MM" required>
+                </li>
+            </ul>
+        </fieldset>
+        <input type="submit" name="submit" id="submit" value="Place Your Order">
+    </form>
+</body>
+</html>

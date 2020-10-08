@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th colspan="2">Pizza Shop 2.0</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name" maxlength="20" required></td>
+            </tr>
+            <tr>
+                <td>Pizza Topping</td>
+                <td>
+                    <input type="radio" name="pizza_topping" id="pt1">
+                    <label for="pt1">Supreme</label><br>
+                    <input type="radio" name="pizza_topping" id="pt2">
+                    <label for="pt2">Vegetarian</label><br>
+                    <input type="radio" name="pizza_topping" id="pt3">
+                    <label for="pt3">Hawaiian</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                    <select name="pizza_sauce" id="pizza_sauce">
+                        <option value="tomato">Tomato</option>
+                        <option value="garlic">Garlic</option>
+                        <option value="hot_sauce">Hot Sauce</option>
+                        <option value="mayo">Mayo</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Optional Extras</td>
+                <td>
+                    <input type="checkbox" name="optional_extras1" id="optional_extras1">
+                    <label for="optional_extras1">Extra Cheese</label>
+                    <input type="checkbox" name="optional_extras2" id="optional_extras2">
+                    <label for="optional_extras2">Gluten Free Base</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Delivery Instructions: <br>
+                    <textarea id="delivery_instructions" cols="60" rows="10" maxlength="100" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" id="submit" value="Send my Order">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
