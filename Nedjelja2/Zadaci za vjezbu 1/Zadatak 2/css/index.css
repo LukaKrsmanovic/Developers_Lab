@@ -12,41 +12,162 @@ body {
 #body_content {
     width: 900px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr 0.4fr;
+    grid-template-areas: 
+        "header header header header"
+        "content content content aside"
+        "footer footer footer footer";
 }
 
 header {
-    width: 100%;
-    height: 200px;
+    grid-area: header;
 }
 
 #header_txt {
-    height: 80%;
-    padding: 20px 10px;
+    padding: 200px 10px 20px;
     background-color: darkolivegreen;
+    background-image: url(../images/park.jpg);
+    background-size: 100% 100%;
     color: #fff;
+    font-size: 1.2rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 nav {
-    width: 100%;
     background: rgb(185,185,185);
     background: linear-gradient(0deg, rgba(185,185,185,1) 0%, rgba(200,200,200,1) 35%, rgba(245,245,245,1) 100%);
 }
 
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
+nav a {
     display: inline-block;
-    padding: 10px 25px;
-    border-right: 3px solid #fff;
     text-transform: uppercase;
+    border-right: 3px solid #fff;
+    color: rgb(121, 121, 121);
+    text-decoration: none;
+    padding: 15px 35px;
 }
 
-nav ul li:hover {
-    background-color: green;
-    color: ;
+nav a:hover { color: #fff; }
+
+.content,  aside{
+    grid-area: content;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.post_shape {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post_shape h2[class^="title"] {
+    margin-bottom: 15px;
+    color: rgb(127, 187, 17);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.post_shape h2.title2 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.post_shape p {
+    font-size: 0.8rem;
+}
+
+.post_shape .products {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.post_shape .products img {
+    width: 100%;
+    height: 7.5rem;
+}
+
+.post_shape p.desc_title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.post_shape:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+aside {
+    grid-area: aside;
+    padding-left: 0px;
+}
+
+aside .post_shape {
+    padding: 15px;
+}
+
+aside .news_item {
+    margin-bottom: 15px;
+}
+
+aside a {
+    font-size: 0.8rem;
+    color:rgb(127, 187, 17);
+}
+aside a:visited {
+    color:rgb(127, 187, 17);
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(127, 187, 17);
+    background: linear-gradient(0deg, rgb(135, 194, 29) 0%, rgb(162, 215, 63) 100%);
+}
+
+footer a {
+    color: #000;
+}
+
+@media only screen and (max-width: 900px) {
+    html { font-size: 14px; }
+    #body_content {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "header"
+            "content"
+            "aside"
+            "footer";
+    }
+    #header_txt {
+        padding-top: 100px;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border: none;
+        border-bottom: 3px solid #fff;
+    }
+    aside {
+        padding-left: 20px;
+    }
+    footer {
+        display: block;
+        padding: 25px;
+        background-color: rgb(127, 187, 17);
+        background: linear-gradient(0deg, rgb(135, 194, 29) 0%, rgb(162, 215, 63) 100%);
+    }
 }
