@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body { background-color: #f1f1f1; }
+
+.cv-container {
+    width: 1400px;
+    margin: auto;
+    margin-top: 16px;
+    /* background-color: wheat; */
+}
+
+.cv-container::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.about-me {
+    width: 33.333%;
+    float: left;
+    padding: 5px;
+    color: #535353;
+}
+
+.experience {
+    width: 66.666%;
+    height: 100%;
+    float: left;
+    background-color: turquoise;
+}
+
+.about-me .container {
+    box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.69);
+    background-color: #ffffff;
+}
+
+.about-me .container .image {
+    position: relative;
+}
+
+.about-me img {
+    width: 100%;
+}
+
+.about-me #name {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    padding: 0px 16px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 800;
+}
+
+.about-me .container > :not([class="image"]) {
+    margin: 14.5px 16px 0px;
+}
+
+.about-me .row {
+    margin-top: 20px;
+}
+
+.about-me .title-row {
+    margin: 1.5rem 0 0;
+}
+
+i {
+    margin-right: 1rem;
+    color: #009688;
+    font-size: 1.1rem !important;
+}
+
+.about-me #line-break {
+    border-top: 1px solid #ebebeb;
+}
+
+.title-m {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.about-me p {
+    margin: 16px 0px;
+}
+
+.line-container {
+    width: 100%;
+    position: relative;
+    background-color: #ebebeb;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ebebeb;
+    padding: 1px;
+}
+
+.languages .line-container { padding: 5px; }
+
+.line-container::before { content: "line"; }
+.line-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.percentage-line {
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #009688;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.line-s { padding: 1px; }
+.line-l { padding: 5px; }
+
+.languages .line-l { color: #009688; }
+
+.line-100 { width: 100%; }
+.line-90 { width: 90%; }
+.line-80 { width: 80%; }
+.line-75 { width: 75%; }
+.line-50 { width: 50%; }
+.line-25 { width: 25%; }
